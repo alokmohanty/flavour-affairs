@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Flavour Affairs</title>
+  <meta name="description" content="Learn about the story behind Flavour Affairs, our passion for catering, and our commitment to fresh ingredients.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#fdfbf7', foreground: '#1a1a1a', mint: '#f4f8f4',
+            primary: { DEFAULT: '#314d27', foreground: '#ffffff', hover: '#23381c' },
+            secondary: { DEFAULT: '#cfa144', foreground: '#1a1a1a', hover: '#b88d3b' },
+            muted: { DEFAULT: '#f4f4f4', foreground: '#64748b' },
+            border: '#e2dac9', card: { DEFAULT: '#ffffff', foreground: '#1a1a1a' }
+          },
+          fontFamily: { sans: ['Outfit', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    html { scroll-behavior: smooth; }
+    body { background-color: theme('colors.background'); color: theme('colors.foreground'); }
+    .btn { @apply inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-bold transition-all hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50 px-6 py-3 leading-none; }
+    .btn-primary { @apply bg-primary text-primary-foreground border-2 border-transparent hover:bg-primary-hover; }
+    .btn-secondary { @apply bg-secondary text-secondary-foreground border-2 border-transparent hover:bg-secondary-hover; }
+    .btn-outline { @apply border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground; }
+  </style>
+</head>
+<body class="font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-[1000] w-full border-b border-border bg-background/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto max-w-7xl px-4 md:px-8 flex h-20 items-center justify-between">
+      <a href="index.html" class="flex items-center gap-4 group">
+        <img src="assets/flavour-affairs.jpg" alt="Flavour Affairs Logo" class="h-14 w-14 rounded-full border-2 border-primary shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+        <span class="hidden sm:inline-block font-serif text-2xl font-bold text-primary tracking-wide">Flavour Affairs</span>
+      </a>
+      <div class="hidden md:flex gap-8 items-center">
+        <a href="about.html" class="text-base font-semibold text-primary transition-colors hover:-translate-y-0.5 inline-block border-b-2 border-primary">About Us</a>
+        <a href="policy.html" class="text-base font-semibold text-foreground hover:text-primary transition-colors hover:-translate-y-0.5 inline-block">Policies</a>
+        <a href="contact.html" class="text-base font-semibold text-foreground hover:text-primary transition-colors hover:-translate-y-0.5 inline-block">Contact</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="contact.html" class="btn btn-secondary">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="w-full bg-mint py-24 border-b border-border">
+    <div class="container mx-auto max-w-4xl px-4 text-center">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-primary font-serif mb-6 tracking-tight">Our Story</h1>
+      <p class="text-xl md:text-2xl text-muted-foreground font-medium">Made with passion, served with love.</p>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="w-full py-24 bg-white">
+    <div class="container mx-auto max-w-3xl px-4 space-y-12">
+      <p class="text-xl leading-relaxed text-foreground">
+        Welcome to <strong>Flavour Affairs</strong>, where culinary artistry meets heartfelt hospitality. Founded on the belief that every meal should be a celebration, we have dedicated ourselves to transforming ordinary events into unforgettable experiences.
+      </p>
+      
+      <div class="space-y-6">
+        <h2 class="text-3xl font-bold text-primary font-serif">Our Philosophy</h2>
+        <p class="text-lg text-muted-foreground leading-relaxed">
+          At the core of Flavour Affairs is a simple yet profound philosophy: <em>Bold Flavours, Fresh Ingredients</em>. We believe that great food starts with great produce. That's why we partner with local farmers and spice merchants to source the finest, freshest ingredients available. Our vibrant blend of spices and herbs ensures that every dish bursts with authentic taste.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        <h2 class="text-3xl font-bold text-primary font-serif">The Culinary Journey</h2>
+        <p class="text-lg text-muted-foreground leading-relaxed">
+          What began as a small, passionate kitchen endeavor has blossomed into a premier catering service. Our signature logo—a skillet tossing vibrant vegetables over an open flame, surrounded by a mosaic of rich spices—perfectly encapsulates our approach. The heart-shaped steam rising from the pan isn't just an illustration; it's a testament to the love we pour into our cooking.
+        </p>
+        <ul class="space-y-4 pt-4">
+          <li class="flex items-center gap-4"><div class="bg-primary/10 p-2 rounded-full"><i class="fa-solid fa-check text-primary"></i></div> <span class="text-lg text-foreground"><strong>Quality First:</strong> No compromises on ingredients.</span></li>
+          <li class="flex items-center gap-4"><div class="bg-primary/10 p-2 rounded-full"><i class="fa-solid fa-check text-primary"></i></div> <span class="text-lg text-foreground"><strong>Custom Experiences:</strong> Menus tailored to your unique theme.</span></li>
+          <li class="flex items-center gap-4"><div class="bg-primary/10 p-2 rounded-full"><i class="fa-solid fa-check text-primary"></i></div> <span class="text-lg text-foreground"><strong>Professional Service:</strong> Flawless execution from setup to cleanup.</span></li>
+        </ul>
+      </div>
+
+      <div class="space-y-6">
+        <h2 class="text-3xl font-bold text-primary font-serif">Meet the Team</h2>
+        <p class="text-lg text-muted-foreground leading-relaxed">
+          Our team consists of classically trained chefs, innovative mixologists, and detail-oriented event coordinators. Together, we work seamlessly to orchestrate a dining experience that delights the senses and leaves a lasting impression on your guests.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full border-t-2 border-border bg-white pt-20 pb-10">
+    <div class="container mx-auto max-w-7xl px-4 md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="space-y-6">
+          <div class="flex items-center gap-3">
+            <img src="assets/flavour-affairs.jpg" alt="Logo" class="h-10 w-10 rounded-full border border-border">
+            <span class="font-serif font-bold text-primary text-xl">Flavour Affairs</span>
+          </div>
+          <p class="text-base text-muted-foreground pr-4 leading-relaxed">The modern catering platform for teams that care about great food and seamless experiences.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-6 text-foreground font-serif">Company</h4>
+          <ul class="space-y-4 text-base text-muted-foreground font-medium">
+            <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-6 text-foreground font-serif">Legal</h4>
+          <ul class="space-y-4 text-base text-muted-foreground font-medium">
+            <li><a href="policy.html" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+            <li><a href="policy.html" class="hover:text-primary transition-colors">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-medium text-muted-foreground">
+        <p>&copy; 2026 Flavour Affairs Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
