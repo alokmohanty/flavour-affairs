@@ -14,8 +14,8 @@
         extend: {
           colors: {
             background: '#fdfbf7', foreground: '#1a1a1a', mint: '#f4f8f4',
-            primary: { DEFAULT: '#314d27', foreground: '#ffffff', hover: '#23381c' },
-            secondary: { DEFAULT: '#cfa144', foreground: '#1a1a1a', hover: '#b88d3b' },
+            primary: { DEFAULT: '#00b373', foreground: '#ffffff', hover: '#008f5c' },
+            secondary: { DEFAULT: '#FFB000', foreground: '#1a1a1a', hover: '#E59E00' },
             muted: { DEFAULT: '#f4f4f4', foreground: '#64748b' },
             border: '#e2dac9', card: { DEFAULT: '#ffffff', foreground: '#1a1a1a' }
           },
@@ -38,103 +38,81 @@
 <body class="font-sans antialiased">
 
   <!-- Navigation -->
-  <nav class="sticky top-0 z-[1000] w-full border-b border-border bg-background/90 backdrop-blur-md shadow-sm">
+  <nav class="sticky top-0 z-[1000] w-full border-b border-border bg-white/90 backdrop-blur-md shadow-sm">
     <div class="container mx-auto max-w-7xl px-4 md:px-8 flex h-20 items-center justify-between">
       <a href="index.html" class="flex items-center gap-4 group">
         <img src="assets/flavour-affairs.jpg" alt="Flavour Affairs Logo" class="h-14 w-14 rounded-full border-2 border-primary shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
         <span class="hidden sm:inline-block font-serif text-2xl font-bold text-primary tracking-wide">Flavour Affairs</span>
       </a>
       <div class="hidden md:flex gap-8 items-center">
-        <a href="about.html" class="text-base font-semibold text-foreground hover:text-primary transition-colors hover:-translate-y-0.5 inline-block">About Us</a>
+        <a href="our-story.html" class="text-base font-semibold text-foreground hover:text-primary transition-colors hover:-translate-y-0.5 inline-block">Our Story</a>
         <a href="policy.html" class="text-base font-semibold text-foreground hover:text-primary transition-colors hover:-translate-y-0.5 inline-block">Policies</a>
         <a href="contact.html" class="text-base font-semibold text-primary transition-colors hover:-translate-y-0.5 inline-block border-b-2 border-primary">Contact</a>
       </div>
       <div class="flex items-center gap-4">
         <a href="contact.html" class="btn btn-secondary">Book Now</a>
+        <button id="mobile-menu-btn" class="md:hidden text-foreground hover:text-primary transition-colors text-2xl ml-2 focus:outline-none">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </div>
-  </nav>
+    </nav>
+
+  <!-- Mobile Menu Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden fixed top-20 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-border shadow-lg z-[999] px-6 py-6 flex flex-col gap-6">
+    <a href="our-story.html" class="text-xl font-bold text-foreground hover:text-primary transition-colors">Our Story</a>
+    <a href="policy.html" class="text-xl font-bold text-foreground hover:text-primary transition-colors">Policies</a>
+    <a href="contact.html" class="text-xl font-bold text-foreground hover:text-primary transition-colors">Contact</a>
+  </div>
 
   <!-- Page Header -->
-  <header class="w-full bg-mint py-24 border-b border-border">
+  <header class="w-full pt-24 pb-8 bg-white">
     <div class="container mx-auto max-w-4xl px-4 text-center">
-      <h1 class="text-5xl md:text-6xl font-extrabold text-primary font-serif mb-6 tracking-tight">Let's Plan Your Event</h1>
-      <p class="text-xl md:text-2xl text-muted-foreground font-medium">Reach out to discuss menus, pricing, and availability.</p>
+      <div class="inline-block bg-mint text-primary font-bold px-4 py-1.5 rounded-full text-sm mb-4 shadow-sm">We're here for you</div>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-foreground font-serif mb-4 tracking-tight">Get In Touch</h1>
+      <p class="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">Our team is ready to help you coordinate the perfect catering package for your upcoming event. Reach out to us through any of the channels below.</p>
     </div>
   </header>
 
   <!-- Content -->
-  <main class="w-full py-24 bg-background">
+  <main class="w-full pt-6 pb-20 bg-white">
     <div class="container mx-auto max-w-7xl px-4 md:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <!-- Location Card -->
+        <a href="https://maps.app.goo.gl/eH58sufZTDeuwgad8" target="_blank" rel="noopener noreferrer" class="card overflow-hidden text-center flex flex-col items-center border-2 border-border shadow-xl hover:-translate-y-2 transition-all duration-300 group block relative">
+          <div class="w-full h-40 relative">
+             <iframe src="https://maps.google.com/maps?q=Flavour+Affairs,+Bengaluru&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; pointer-events: none;" allowfullscreen="" loading="lazy"></iframe>
+             <div class="absolute inset-0 bg-transparent group-hover:bg-primary/5 transition-colors z-10"></div>
+          </div>
+          <div class="p-6 pt-4 flex flex-col items-center flex-grow">
+            <h4 class="text-2xl font-bold mb-2 font-serif text-foreground group-hover:text-primary transition-colors">Our Kitchen</h4>
+            <p class="text-muted-foreground leading-snug text-sm px-2">Sy no : 8, Bidarahalli hobli, 67, Chaitanya Ananya, Seegehalli, Krishnarajapuram, Bengaluru, Shigehalli, Karnataka 560067</p>
+          </div>
+        </a>
         
-        <div class="space-y-12">
+        <!-- Phone Card -->
+        <div class="card p-10 text-center flex flex-col items-center justify-center space-y-6 border-2 border-border shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div class="h-24 w-24 rounded-full bg-primary/10 text-primary flex items-center justify-center shadow-inner">
+            <i class="fa-solid fa-phone text-4xl"></i>
+          </div>
           <div>
-            <h2 class="text-4xl font-extrabold text-primary font-serif mb-4">Get In Touch</h2>
-            <p class="text-lg text-muted-foreground leading-relaxed">Our team is ready to help you coordinate the perfect catering package for your upcoming event.</p>
-          </div>
-          
-          <div class="space-y-8">
-            <div class="flex gap-6 items-start">
-              <div class="h-14 w-14 rounded-full bg-secondary/20 text-secondary flex items-center justify-center shrink-0">
-                <i class="fa-solid fa-location-dot text-2xl"></i>
-              </div>
-              <div>
-                <h4 class="text-xl font-bold mb-1">Our Kitchen</h4>
-                <p class="text-muted-foreground leading-relaxed text-lg">123 Culinary Ave<br>Food City, FC 90210</p>
-              </div>
-            </div>
-            
-            <div class="flex gap-6 items-start">
-              <div class="h-14 w-14 rounded-full bg-secondary/20 text-secondary flex items-center justify-center shrink-0">
-                <i class="fa-solid fa-phone text-2xl"></i>
-              </div>
-              <div>
-                <h4 class="text-xl font-bold mb-1">Phone</h4>
-                <p class="text-muted-foreground leading-relaxed text-lg">+1 (555) 123-4567<br>Mon-Fri, 9am - 6pm</p>
-              </div>
-            </div>
-            
-            <div class="flex gap-6 items-start">
-              <div class="h-14 w-14 rounded-full bg-secondary/20 text-secondary flex items-center justify-center shrink-0">
-                <i class="fa-solid fa-envelope text-2xl"></i>
-              </div>
-              <div>
-                <h4 class="text-xl font-bold mb-1">Email</h4>
-                <p class="text-muted-foreground leading-relaxed text-lg">hello@flavouraffairs.com<br>events@flavouraffairs.com</p>
-              </div>
-            </div>
+            <h4 class="text-2xl font-bold mb-3 font-serif text-foreground">Call Us</h4>
+            <p class="text-muted-foreground leading-relaxed text-lg"><a href="tel:+918217077255" class="hover:text-primary transition-colors">+91-8217077255</a><br>All days, 9am - 6pm</p>
           </div>
         </div>
-
-        <div class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-xl border-2 border-border relative overflow-hidden">
-          <form class="space-y-6 relative z-10" action="#" method="POST">
-            <div class="space-y-2">
-              <label for="name" class="font-bold text-foreground pl-2">Full Name</label>
-              <input type="text" id="name" name="name" class="input-field" placeholder="John Doe" required>
-            </div>
-            
-            <div class="space-y-2">
-              <label for="email" class="font-bold text-foreground pl-2">Email Address</label>
-              <input type="email" id="email" name="email" class="input-field" placeholder="john@example.com" required>
-            </div>
-
-            <div class="space-y-2">
-              <label for="event-type" class="font-bold text-foreground pl-2">Event Type</label>
-              <input type="text" id="event-type" name="event-type" class="input-field" placeholder="Wedding, Corporate, Birthday, etc.">
-            </div>
-            
-            <div class="space-y-2">
-              <label for="message" class="font-bold text-foreground pl-2">Message</label>
-              <textarea id="message" name="message" class="input-field rounded-3xl" style="min-height: 150px; resize: vertical;" placeholder="Tell us about your event details, date, and guest count..." required></textarea>
-            </div>
-            
-            <div class="pt-4">
-              <button type="submit" class="btn btn-primary w-full text-lg py-4 shadow-lg">Send Message <i class="fa-solid fa-paper-plane ml-2"></i></button>
-            </div>
-          </form>
+        
+        <!-- Email Card -->
+        <div class="card p-10 text-center flex flex-col items-center justify-center space-y-6 border-2 border-border shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div class="h-24 w-24 rounded-full bg-secondary/20 text-secondary flex items-center justify-center shadow-inner">
+            <i class="fa-solid fa-envelope text-4xl"></i>
+          </div>
+          <div>
+            <h4 class="text-2xl font-bold mb-3 font-serif text-foreground">Email Us</h4>
+            <a href="mailto:enquiry@flavouraffairs.com" class="text-primary hover:text-primary-hover transition-colors font-medium text-lg block">enquiry@flavouraffairs.com</a>
+            <a href="mailto:feedback@flavouraffairs.com" class="text-primary hover:text-primary-hover transition-colors font-medium text-lg block mt-1">feedback@flavouraffairs.com</a>
+          </div>
         </div>
-
       </div>
     </div>
   </main>
@@ -142,7 +120,7 @@
   <!-- Footer -->
   <footer class="w-full border-t-2 border-border bg-white pt-20 pb-10">
     <div class="container mx-auto max-w-7xl px-4 md:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
         <div class="space-y-6">
           <div class="flex items-center gap-3">
             <img src="assets/flavour-affairs.jpg" alt="Logo" class="h-10 w-10 rounded-full border border-border">
@@ -153,15 +131,16 @@
         <div>
           <h4 class="font-bold text-lg mb-6 text-foreground font-serif">Company</h4>
           <ul class="space-y-4 text-base text-muted-foreground font-medium">
-            <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+            <li><a href="our-story.html" class="hover:text-primary transition-colors">Our Story</a></li>
             <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
           </ul>
         </div>
         <div>
           <h4 class="font-bold text-lg mb-6 text-foreground font-serif">Legal</h4>
           <ul class="space-y-4 text-base text-muted-foreground font-medium">
-            <li><a href="policy.html" class="hover:text-primary transition-colors">Privacy Policy</a></li>
-            <li><a href="policy.html" class="hover:text-primary transition-colors">Terms of Service</a></li>
+            <li><a href="policy.html#privacy" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+            <li><a href="policy.html#terms" class="hover:text-primary transition-colors">Terms of Service</a></li>
+            <li><a href="policy.html#cancellation" class="hover:text-primary transition-colors">Cancellation & Refund Policy</a></li>
           </ul>
         </div>
       </div>
@@ -171,5 +150,20 @@
     </div>
   </footer>
 
+
+  <script>
+    document.getElementById("mobile-menu-btn")?.addEventListener("click", function() {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+      const icon = this.querySelector("i");
+      if (menu.classList.contains("hidden")) {
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      } else {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+      }
+    });
+  </script>
 </body>
 </html>
